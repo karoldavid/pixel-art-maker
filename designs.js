@@ -1,10 +1,45 @@
-// Select color input
-// Select size input
+const $pixel_canvas = $("#pixel_canvas");
+const $width = $("#input_width");
+const $height = $("#input_height");
+const $colorPicker = $("#colorPicker");
+let color = "#000000";
 
-// When size is submitted by the user, call makeGrid()
-
-function makeGrid() {
-
-// Your code goes here!
-
+function makeUpdatePaintColor() {
+	$colorPicker.change(function() {
+		color = $colorPicker.val();
+	});
 }
+
+function makeGridPaint() {
+	$("td").click(function(event) {
+		const $cellElem = $(this);
+		$cellElem.css("background-color", color);
+	});
+}
+
+function drawGrid(width, height) {
+	$pixel_canvas.empty();
+	for (let i = 0; i < height; i++) {
+		$pixel_canvas.append("<tr> </tr>");
+		for (let l = 0; l < width; l++) {
+			$("tr:last").append("<td> </td>");
+		}
+	}
+	makeGridPaint();
+}
+
+function makeGetFormData() {
+	$("form").submit(function(event) {
+		const width = $width.val();
+		const height = $height.val();
+		drawGrid(width, height);
+		event.preventDefault();
+	});
+}
+
+function init() {
+	makeGetFormData();
+	makeUpdatePaintColor();
+}
+
+init();

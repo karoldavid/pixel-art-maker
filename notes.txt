@@ -1,0 +1,12 @@
+Pixel Art Maker
+
+Project Overview
+https://classroom.udacity.com/nanodegrees/nd001/parts/9e34624d-cdc8-4cd7-9d7e-78943413e645/modules/86dad2ab-1bb7-4c90-bf91-2d0a90e0ab03/lessons/67c36bb7-3dc7-4c17-a971-05eebbfc31bc/concepts/9c749ac2-1268-4e57-b2e4-6e8f5d77116d
+
+Instructions
+https://classroom.udacity.com/nanodegrees/nd001/parts/9e34624d-cdc8-4cd7-9d7e-78943413e645/modules/86dad2ab-1bb7-4c90-bf91-2d0a90e0ab03/lessons/67c36bb7-3dc7-4c17-a971-05eebbfc31bc/concepts/e125e728-14e2-4a85-a8f2-df14fe833b58
+
+Project Rubric
+https://review.udacity.com/#!/rubrics/641/view
+
+https://github.com/udacity/project-pixel-art-maker-starter.git
