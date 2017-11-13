@@ -1,32 +1,35 @@
-const $form = $("form");
-const $pixel_canvas = $("#pixel_canvas");
-const $width = $("#input_width");
-const $height = $("#input_height");
-const $colorPicker = $("#colorPicker");
+const pixelCanvasElem = document.getElementById("pixel_canvas");
+const sizePickerElem = document.getElementById("sizePicker");
+const widthInputElem = document.getElementById("input_width");
+const heightInputElem = document.getElementById("input_height");
+const colorPickerElem = document.getElementById("colorPicker");
 let color = "#000000";
 
 function makeGrid(width, height) {
-	$pixel_canvas.empty();
-	for (let i = 0; i < height; i++) {
-		$pixel_canvas.append("<tr> </tr>");
-		for (let l = 0; l < width; l++) {
-			$("tr:last").append("<td> </td>");
+	pixelCanvasElem.innerHTML = "";
+	for (let row = 0; row < width; row++) {
+		let rowElem = document.createElement("tr");
+		for (let column = 0; column < height; column++) {
+			let columnElem = document.createElement("td");
+			rowElem.appendChild(columnElem);
 		}
+		pixelCanvasElem.appendChild(rowElem);
 	}
-
-	$("td").click(function(event) {
-		const $cellElem = $(this);
-		$cellElem.css("background-color", color);
-	});
 }
 
-$form.submit(function(event) {
-	const width = $width.val();
-	const height = $height.val();
-	makeGrid(width, height);
+sizePickerElem.addEventListener("submit", function(event) {
 	event.preventDefault();
+	let width = widthInputElem.value;
+	let height = heightInputElem.value;
+	makeGrid(width, height);
 });
 
-$colorPicker.change(function() {
-	color = $colorPicker.val();
+pixelCanvasElem.addEventListener("click", function(event) {
+	if (event.target.tagName === "TD") {
+		event.target.style.backgroundColor = color;
+	}
+});
+
+colorPickerElem.addEventListener("change", function(event) {
+	color = event.target.value;
 });
