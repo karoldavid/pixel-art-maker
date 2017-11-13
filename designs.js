@@ -1,23 +1,11 @@
+const $form = $("form");
 const $pixel_canvas = $("#pixel_canvas");
 const $width = $("#input_width");
 const $height = $("#input_height");
 const $colorPicker = $("#colorPicker");
 let color = "#000000";
 
-function makeUpdatePaintColor() {
-	$colorPicker.change(function() {
-		color = $colorPicker.val();
-	});
-}
-
-function makeGridPaint() {
-	$("td").click(function(event) {
-		const $cellElem = $(this);
-		$cellElem.css("background-color", color);
-	});
-}
-
-function drawGrid(width, height) {
+function makeGrid(width, height) {
 	$pixel_canvas.empty();
 	for (let i = 0; i < height; i++) {
 		$pixel_canvas.append("<tr> </tr>");
@@ -25,21 +13,20 @@ function drawGrid(width, height) {
 			$("tr:last").append("<td> </td>");
 		}
 	}
-	makeGridPaint();
-}
 
-function makeGetFormData() {
-	$("form").submit(function(event) {
-		const width = $width.val();
-		const height = $height.val();
-		drawGrid(width, height);
-		event.preventDefault();
+	$("td").click(function(event) {
+		const $cellElem = $(this);
+		$cellElem.css("background-color", color);
 	});
 }
 
-function init() {
-	makeGetFormData();
-	makeUpdatePaintColor();
-}
+$form.submit(function(event) {
+	const width = $width.val();
+	const height = $height.val();
+	makeGrid(width, height);
+	event.preventDefault();
+});
 
-init();
+$colorPicker.change(function() {
+	color = $colorPicker.val();
+});
