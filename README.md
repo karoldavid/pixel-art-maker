@@ -2,8 +2,7 @@
 
 Define the grid size, choose a color, and start painting.
 
-
-# Live Version
+## Live Version
 
 Click [here](https://karoldavid.github.io/pixel-art-maker/) to see a live version.
 
