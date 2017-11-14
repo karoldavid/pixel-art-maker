@@ -6,6 +6,8 @@ Define the grid size, choose a color, and start painting.
 
 Click [here](https://karoldavid.github.io/pixel-art-maker/) to see a live version.
 
+![Image of Pixel Art Maker showing a smiley](pixel-art-maker-smiley.png)
+
 ## Getting Started
 
 1. Clone or download the repository.
