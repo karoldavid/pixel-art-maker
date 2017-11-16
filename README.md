@@ -1,12 +1,23 @@
 # Pixel Art Maker Project
 
-Define the grid size, choose a color, and start painting.
+The single-page web app is all about demonstating JavaScript skills: 
+
+* Defining variables with const and let
+* Writing nested loops
+* Accessing the DOM using methods of the document object
+* Declaring functions and attaching them to DOM objects as event listeners
 
 ## Live Version
 
 Click [here](https://karoldavid.github.io/pixel-art-maker/) to see a live version.
 
 ![Image of Pixel Art Maker showing a smiley](pixel-art-maker-smiley.png)
+
+##Features
+
+* Set the grid size.
+* Choose or change the color.
+* Click the a grid cell to fill that cell with the chosen color.
 
 ## Getting Started
 
