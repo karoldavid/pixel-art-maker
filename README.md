@@ -13,7 +13,7 @@ Click [here](https://karoldavid.github.io/pixel-art-maker/) to see a live versio
 
 ![Image of Pixel Art Maker showing a smiley](pixel-art-maker-smiley.png)
 
-##Features
+## Features
 
 * Set the grid size.
 * Choose or change the color.
